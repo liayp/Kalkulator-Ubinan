@@ -143,8 +143,17 @@ fun PadiExpressOutputCard(
             modifier = Modifier.fillMaxWidth().padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            if (subValue != null) {
+                Text(text= "Berat Hasil Ubinan", color = Color.White.copy(alpha = 0.8f), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                Spacer(Modifier.height(6.dp))
+                Text(text = subValue, color = Color.White.copy(0.9f), fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                Text(text = "(dalam satuan kilogram)", color = Color.White.copy(alpha = 0.8f), fontSize = 12.sp)
+            }
+
+            Spacer(Modifier.height(16.dp))
+
             Text(text = label, color = Color.White.copy(alpha = 0.9f), fontSize = 14.sp, fontWeight = FontWeight.Bold)
-            Spacer(Modifier.height(4.dp))
+            Spacer(Modifier.height(2.dp))
 
             Text(
                 text = value,
@@ -153,14 +162,6 @@ fun PadiExpressOutputCard(
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 42.sp
             )
-
-            Spacer(Modifier.height(10.dp))
-
-            if (subValue != null) {
-                Text(text= "Berat Hasil Ubinan", color = Color.White.copy(alpha = 0.7f), fontSize = 12.sp)
-                Spacer(Modifier.height(6.dp))
-                Text(text = subValue, color = Color.White.copy(0.9f), fontSize = 16.sp, fontWeight = FontWeight.Bold)
-            }
 
             Spacer(Modifier.height(16.dp))
 
