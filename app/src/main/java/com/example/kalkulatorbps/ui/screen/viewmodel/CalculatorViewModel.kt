@@ -162,7 +162,7 @@ class CalculatorViewModel : ViewModel() {
             val newState = it.copy(
                 valLkkTon = lkkTonHa,
                 valJpkTon = jpkTonHa,
-                jagungSubDisplay = "Netto Ubinan: ${it.formatResultNumber(jNetto)} Kg"
+                jagungSubDisplay = "${it.formatResultNumber(jNetto)} Kg"
             )
             newState.copy(jagungMainDisplay = recalculateDisplayJagung(newState, s.selectedJagungMetric, s.selectedJagungUnit))
         }
