@@ -138,7 +138,7 @@ class CalculatorViewModel : ViewModel() {
                 valGkpTon = gkpTonHa,
                 valGkgTon = gkgTonHa,
                 valBerasTon = berasTonHa,
-                padiSubDisplay = "${it.formatResultNumber(pNetto)} Kg"
+                padiSubDisplay = "${it.formatResultNumber(pNetto)}"
             )
             // Update display angka besar
             newState.copy(padiMainDisplay = recalculateDisplayPadi(newState, s.selectedPadiMetric, s.selectedPadiUnit))
@@ -162,7 +162,7 @@ class CalculatorViewModel : ViewModel() {
             val newState = it.copy(
                 valLkkTon = lkkTonHa,
                 valJpkTon = jpkTonHa,
-                jagungSubDisplay = "${it.formatResultNumber(jNetto)} Kg"
+                jagungSubDisplay = "${it.formatResultNumber(jNetto)}"
             )
             newState.copy(jagungMainDisplay = recalculateDisplayJagung(newState, s.selectedJagungMetric, s.selectedJagungUnit))
         }

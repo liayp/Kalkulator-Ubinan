@@ -46,9 +46,9 @@ fun PadiExpressTextField(
                 .fillMaxWidth()
                 .shadow(
                     elevation = if (readOnly) 0.dp else 4.dp,
-                    shape = RoundedCornerShape(12.dp)
+                    shape = RoundedCornerShape(14.dp)
                 ),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(14.dp),
             colors = TextFieldDefaults.colors(
                 focusedContainerColor = containerColor,
                 unfocusedContainerColor = containerColor,
@@ -144,23 +144,23 @@ fun PadiExpressOutputCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (subValue != null) {
-                Text(text= "Berat Hasil Ubinan", color = Color.White.copy(alpha = 0.8f), fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                Text(text= "Berat Hasil Ubinan", color = Color.White.copy(alpha = 0.9f), fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+                Text(text = "(dalam satuan kilogram)", color = Color.White.copy(alpha = 0.9f), fontSize = 14.sp)
                 Spacer(Modifier.height(6.dp))
-                Text(text = subValue, color = Color.White.copy(0.9f), fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                Text(text = "(dalam satuan kilogram)", color = Color.White.copy(alpha = 0.8f), fontSize = 12.sp)
+                Text(text = subValue, color = Color.White, fontSize = 42.sp, fontWeight = FontWeight.Bold)
             }
 
             Spacer(Modifier.height(16.dp))
 
-            Text(text = label, color = Color.White.copy(alpha = 0.9f), fontSize = 14.sp, fontWeight = FontWeight.Bold)
+            Text(text = label, color = Color.White.copy(alpha = 0.9f), fontSize = 12.sp, fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(2.dp))
 
             Text(
                 text = value,
                 color = Color.White,
-                fontSize = 42.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.ExtraBold,
-                lineHeight = 42.sp
+                lineHeight = 16.sp
             )
 
             Spacer(Modifier.height(16.dp))
