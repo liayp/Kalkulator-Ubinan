@@ -88,7 +88,7 @@ fun PadiExpressButton(
         modifier = modifier
             .fillMaxWidth()
             .height(54.dp),
-        shape = RoundedCornerShape(12.dp),
+        shape = RoundedCornerShape(50),
         colors = ButtonDefaults.buttonColors(
             containerColor = PadiMediumGreen,
             contentColor = White
@@ -155,7 +155,9 @@ fun PadiExpressOutputCard(
             )
 
             if (subValue != null) {
-                Text(text = subValue, color = Color.White.copy(alpha = 0.7f), fontSize = 12.sp)
+                Text(text= "Berat Hasil Ubinan", color = Color.White.copy(alpha = 0.7f), fontSize = 12.sp)
+                Spacer(Modifier.height(10.dp))
+                Text(text = subValue, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold)
             }
 
             Spacer(Modifier.height(16.dp))

@@ -49,7 +49,7 @@ fun JagungScreen(viewModel: CalculatorViewModel) {
 
         // BUTTON HITUNG
         PadiExpressButton(
-            text = "HITUNG ESTIMASI",
+            text = "HITUNG",
             onClick = { viewModel.calculateJagung() }
         )
 

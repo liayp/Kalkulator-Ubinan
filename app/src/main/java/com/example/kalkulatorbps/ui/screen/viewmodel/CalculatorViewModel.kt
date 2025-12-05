@@ -34,13 +34,13 @@ data class CalculatorUiState(
 
     // HASIL (OUTPUT)
     val padiMainDisplay: String = "0",
-    val padiSubDisplay: String = "Tekan tombol Hitung", // Default state
+    val padiSubDisplay: String = "0", // Default state
     val valGkpTon: Double = 0.0,
     val valGkgTon: Double = 0.0,
     val valBerasTon: Double = 0.0,
 
     val jagungMainDisplay: String = "0",
-    val jagungSubDisplay: String = "Tekan tombol Hitung", // Default state
+    val jagungSubDisplay: String = "0", // Default state
     val valLkkTon: Double = 0.0,
     val valJpkTon: Double = 0.0
 ) {
@@ -138,7 +138,7 @@ class CalculatorViewModel : ViewModel() {
                 valGkpTon = gkpTonHa,
                 valGkgTon = gkgTonHa,
                 valBerasTon = berasTonHa,
-                padiSubDisplay = "Netto Ubinan: ${it.formatResultNumber(pNetto)} Kg"
+                padiSubDisplay = "${it.formatResultNumber(pNetto)} Kg"
             )
             // Update display angka besar
             newState.copy(padiMainDisplay = recalculateDisplayPadi(newState, s.selectedPadiMetric, s.selectedPadiUnit))

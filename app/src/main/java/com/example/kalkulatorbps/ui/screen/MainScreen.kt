@@ -102,8 +102,8 @@ fun MainScreen(
         containerColor = PadiDarkGreen,
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Kalkulator Ubinan BPS", color = Color.White, fontWeight = FontWeight.Bold) },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                title = { Text("Konversi Ubinan BPS", color = Color.White, fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color.Transparent
                 ),
                 actions = {
@@ -124,10 +124,10 @@ fun MainScreen(
                 selectedTabIndex = pagerState.currentPage,
                 containerColor = Color.Transparent,
                 indicator = { tabPositions ->
-                    TabRowDefaults.Indicator(
+                    TabRowDefaults.SecondaryIndicator(
                         Modifier.tabIndicatorOffset(tabPositions[pagerState.currentPage]),
-                        color = PadiDarkGreen,
-                        height = 4.dp
+                        height = 4.dp,
+                        color = PadiDarkGreen
                     )
                 },
                 contentColor = PadiDarkGreen,
